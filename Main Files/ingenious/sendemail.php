@@ -13,9 +13,11 @@ if (isset($_POST["username"])) {
         // Server settings
         // $mail->SMTPDebug = 2; // Enable verbose debug output
         $mail->isSMTP(); // Set mailer to use SMTP
-        $mail->Host = 'relay-hosting.secureserver.net'; // Specify GoDaddy's SMTP server
+        //$mail->Host = 'relay-hosting.secureserver.net'; // Specify GoDaddy's SMTP server
+        $mail->Host = 'smtp.office365.com'; // Specify Microsoft's SMTP server (for Office 365)
         $mail->SMTPAuth = false; // Disable SMTP authentication
-        $mail->Port = 25; // TCP port to connect to
+        $mail->Port = 587; // TCP port to connect to
+        //$mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
 
         // Recipients
         $mail->setFrom('info@splendidit.com', 'Mailer');
