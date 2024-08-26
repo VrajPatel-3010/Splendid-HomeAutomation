@@ -18,10 +18,12 @@ if (isset($_POST["username"])) {
         $mail->SMTPAuth = false; // Disable SMTP authentication
         $mail->Port = 587; // TCP port to connect to
         //$mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
+        $mail->SMTPDebug = 2; // Enable verbose debug output
 
         // Recipients
         $mail->setFrom('info@splendidit.com', 'Mailer');
         $mail->addAddress('info@splendidit.com', 'Recipient Name'); // Add a recipient
+        $mail->SMTPDebug = 2; // Enable verbose debug output
 
         // Content
         $mail->isHTML(true); // Set email format to HTML
