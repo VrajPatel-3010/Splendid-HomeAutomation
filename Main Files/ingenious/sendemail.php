@@ -17,7 +17,7 @@ if (isset($_POST["username"])) {
         $mail->Host = 'smtp.office365.com'; // Specify Microsoft's SMTP server (for Office 365)
         $mail->SMTPAuth = false; // Disable SMTP authentication
         $mail->Port = 587; // TCP port to connect to
-        //$mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
+        $mail->SMTPSecure = 'tls';                          // Enable TLS encryption, `ssl` is also possible
         $mail->SMTPDebug = 2; // Enable verbose debug output
 
         // Recipients
