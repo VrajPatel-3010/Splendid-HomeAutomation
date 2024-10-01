@@ -26,6 +26,8 @@ if ($('#email-form').length) {
 			.then(function () {
 				console.log('Mail Sent !');
 				$('#email-form .response').html('<div class="success">Email has been sent successfully.</div>');
+				document.getElementById("email-form").reset();
+				alert('Email has been sent successfully. !');
 			}, function (error) {
 				console.log('FAILED...', error);
 				$('#email-form .response').html('<div class="error">Error: Email has not been sent.');
